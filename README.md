@@ -20,6 +20,10 @@ I have found this to be particularly useful when working with Xamarin projects i
 
 In order access the code code distribution pad, navigate to `View -> Pads -> Code Distribution`.
 
+## Planned TODOs
+
+- Fix and release a console version
+	- Enable code distribution to be gathered as part of a CI build
 
 ## Authors
 
