@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0568EFC0-DF40-4014-AA27-343F01AC2F83}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>UnitTests</RootNamespace>
+    <AssemblyName>UnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Processing\DirectoryProcessingTests.cs" />
+    <Compile Include="Processing\LineCountTests.cs" />
+    <Compile Include="Results\ResultsTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Data2\" />
+    <Folder Include="Data\IgnoredDirectory\" />
+    <Folder Include="Data\IgnoredDirectory\IgnoredSubDirectory\" />
+    <Folder Include="Data\MiscFiles\" />
+    <Folder Include="Processing\" />
+    <Folder Include="Results\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\EmptyFile.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\SmallClass.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\ClassWithEmptyLines.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\MediumClass.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data2\ClassWithEmptyLines_copy.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <LogicalName>UnitTests.Data.ClassWithEmptyLines_copy.cs</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data2\EmptyFile_copy.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data2\MediumClass_copy.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <LogicalName>UnitTests.Data.MediumClass_copy.cs</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data2\SmallClass_copy.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <LogicalName>UnitTests.Data.SmallClass_copy.cs</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\IgnoredDirectory\IgnoredClass1.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\IgnoredDirectory\IgnoredClass2.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\IgnoredDirectory\IgnoredClass3.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\IgnoredDirectory\IgnoredSubDirectory\IgnoredClass4.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <LogicalName>UnitTests.Data.IgnoredDirectory.IgnoredClass4.cs</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\IgnoredDirectory\IgnoredSubDirectory\IgnoredClass5.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <LogicalName>UnitTests.Data.IgnoredDirectory.IgnoredClass5.cs</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\IgnoredDirectory\IgnoredSubDirectory\IgnoredClass6.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <LogicalName>UnitTests.Data.IgnoredDirectory.IgnoredClass6.cs</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\MiscFiles\Test1.g.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\MiscFiles\Test2.g.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\MiscFiles\Test3.g.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CodeDistribution.Common\CodeDistribution.Common.csproj">
+      <Project>{49A90725-6EA3-4446-BC9B-0B37D4CEEDA7}</Project>
+      <Name>CodeDistribution.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

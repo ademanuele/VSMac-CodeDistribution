@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Addin
+    id = "com.arthurdemanuele.codedistribution">
+    <Header>
+        <Name>Code Distribution Extension</Name>
+        <Description>Provides a new pad in Visual Studio for Mac that visualises how code is distributed amongst all the projects in your workspace.
+Particularly handy with Xamarin projects in order to see the proportion of shared code and platform-specific code.
+
+by Arthur Demanuele</Description>
+        <Author>Arthur Demanuele</Author>
+        <Copyright>Arthur Demanuele</Copyright>
+        <Url>https://github.com/ademanuele/VSMac-CodeDistribution</Url>
+    </Header>
+    <Extension
+        path = "/MonoDevelop/Ide/Pads">
+        <Pad
+            id               = "CodeDistribution.Pad.CodeDistributionPad"
+            _label           = "Code Distribution"
+            class            = "CodeDistribution.Pad.CodeDistributionPad"
+            defaultPlacement = "right" />
+    </Extension>
+</Addin>
