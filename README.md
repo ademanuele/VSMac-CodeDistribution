@@ -18,7 +18,7 @@ I have found this to be particularly useful when working with Xamarin projects i
 
 4. Done.
 
-In order access the code code distribution pad, navigate to `View -> Pads -> Code Distribution`.
+In order access the code distribution pad, navigate to `View -> Pads -> Code Distribution`.
 
 ## Planned TODOs
 
