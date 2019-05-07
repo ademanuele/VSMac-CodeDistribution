@@ -4,7 +4,7 @@ using Mono.Addins.Description;
 [assembly: Addin(
     "CodeDistribution.Pad",
     Namespace = "CodeDistribution.Pad",
-    Version = "1.0"
+    Version = "1.1"
 )]
 
 [assembly: AddinName("Code Distribution")]

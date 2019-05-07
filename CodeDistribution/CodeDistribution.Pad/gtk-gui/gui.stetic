@@ -5,7 +5,7 @@
     <target-gtk-version>2.12</target-gtk-version>
   </configuration>
   <import>
-    <widget-library name="../bin/Debug/CodeDistribution.Pad.dll" internal="true" />
+    <widget-library name="../bin/Release/CodeDistribution.Pad.dll" internal="true" />
   </import>
   <widget class="Gtk.Dialog" id="CodeDistribution.Pad.AboutDialog.AboutDialog" design-size="714 300">
     <property name="MemberName" />
