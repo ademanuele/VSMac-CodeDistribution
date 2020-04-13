@@ -6,15 +6,19 @@ I have found this to be particularly useful when working with Xamarin projects i
 
 ![](doc/preview.png "Preview")
 
-## Installing
+## Installation
 
-1. Download the latest extension `.mpack` file from the [Releases](https://github.com/ademanuele/VSMac-CodeDistribution/releases) section.
+1. Open Visual Studio Extension Repository Manager via `Visual Studio -> Extensions... -> Gallery -> Repositories Dropdown -> Manage Repositories`.
 
-2. In Visual Studio for Mac, open `Extension Manager -> Install from file...` and install the downloaded file.
+2. Add `https://raw.githubusercontent.com/ademanuele/VSMac-Extensions/master/main.mrep` to your repository sources.
 
-3. Restart Visual Studio for Mac.
+3. Back in extension manager, you should now be able to see the extension listed as "Code Distribution Extension". Select and press `install`.
 
-4. Done.
+4. Restart Visual Studio for Mac.
+
+5. Done.
+
+Any future updates to the extension should show up in the `Updates` tab of the Extension Manager.
 
 ## Usage
 
@@ -32,7 +36,7 @@ If you find a bug or have a feature request, please report them at this reposito
 
 If you like this tool and would like to support its development, you can...
 
-<a href="https://www.buymeacoffee.com/arthurdemanuele" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
+<a href="https://www.buymeacoffee.com/arthurdemanuele" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" style="height: 36px !important;width: 152px !important;" ></a>
 
 ## Authors
 
